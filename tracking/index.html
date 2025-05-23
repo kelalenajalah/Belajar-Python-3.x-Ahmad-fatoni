@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buat Link Pelacakan</title>
+</head>
+<body>
+  <h2>Buat Link Pelacakan</h2>
+  <input id="username" placeholder="Masukkan nama pengguna" />
+  <button onclick="buatLink()">Buat Link</button>
+
+  <p id="hasil"></p>
+
+  <script>
+    function buatLink() {
+      const user = document.getElementById('username').value.trim();
+      if (!user) {
+        alert('Isi nama pengguna dulu!');
+        return;
+      }
+      const baseUrl = window.location.origin + '/lacak.html';
+      const link = `${baseUrl}?user=${encodeURIComponent(user)}`;
+      document.getElementById('hasil').innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+    }
+  </script>
+</body>
+</html>

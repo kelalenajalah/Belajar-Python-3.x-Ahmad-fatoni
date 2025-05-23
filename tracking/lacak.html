@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pelacakan Lokasi</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <h2>Bagikan Lokasi Kamu</h2>
+  <p id="info"></p>
+  <button onclick="bagikanLokasi()">Bagikan Lokasi</button>
+
+  <script>
+    // Config Firebase kamu, ganti dengan milikmu
+    const firebaseConfig = {
+      apiKey: "APIKEY",
+      authDomain: "PROJECT.firebaseapp.com",
+      databaseURL: "https://PROJECT.firebaseio.com",
+      projectId: "PROJECT",
+      storageBucket: "PROJECT.appspot.com",
+      messagingSenderId: "SENDERID",
+      appId: "APPID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const user = urlParams.get('user') || 'guest';
+
+    document.getElementById('info').innerText = `Halo ${user}, klik tombol untuk bagikan lokasi kamu.`;
+
+    function bagikanLokasi() {
+      if (!navigator.geolocation) {
+        alert('Browser kamu tidak mendukung Geolocation');
+        return;
+      }
+
+      navigator.geolocation.watchPosition(position => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        // Simpan lokasi realtime ke Firebase
+        db.ref('lokasi/' + user).set({
+          latitude: lat,
+          longitude: lon,
+          timestamp: Date.now()
+        }).then(() => {
+          console.log('Lokasi terkirim');
+        });
+      }, error => {
+        alert('Gagal mendapatkan lokasi: ' + error.message);
+      }, {
+        enableHighAccuracy: true,
+        maximumAge: 10000,
+        timeout: 10000
+      });
+    }
+  </script>
+</body>
+</html>
