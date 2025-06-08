@@ -67,7 +67,7 @@ Perusahaan ini akan berfokus pada:
 
 Saya sangat terbuka untuk belajar bersama, diskusi proyek, atau kolaborasi ide.
 
-- 🌐 LinkedIn: [linkedin.com/in/Ahmad Fatoni] www.linkedin.com/in/ahmad-fatoni-15761a289 
+- 🌐 LinkedIn: www.linkedin.com/in/ahmad-fatoni-15761a289 
 - ✉️ Email: ahfatoni909@email.com
 - Instagram : www.instagram.com/@amed_patoni
 - Youtube : www.youtube.com/@ahmadfatoni1234
