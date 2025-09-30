@@ -22,11 +22,11 @@
 
 # print(20*"=")
 
-# def matematika(angka1, angka2):
-#     hasil = angka1 + angka2
-#     print(f"{angka1} + {angka2} = {hasil}")
+def matematika(angka1, angka2):
+    hasil = angka1 + angka2
+    print(f"{angka1} + {angka2} = {hasil}")
 
-# matematika(3,32)
+matematika(3,32)
 
 # print(20*"=")
 

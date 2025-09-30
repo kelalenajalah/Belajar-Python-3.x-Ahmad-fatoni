@@ -37,7 +37,7 @@ for mahasiswa in data_mahasiswa:
 	KEY = mahasiswa
 
 	NAMA = data_mahasiswa[KEY]['nama']
-	NIM = data_mahasiswa[KEY]['nim']
+	NIM = data_mahasiswa[KEY]['nim']a
 	SKS = data_mahasiswa[KEY]['sks_lulus']
 	BEASISWA = data_mahasiswa[KEY]['beasiswa']
 	LAHIR = data_mahasiswa[KEY]['lahir'].strftime("%x")
