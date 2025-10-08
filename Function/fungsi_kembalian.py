@@ -51,3 +51,4 @@ print(f"Hasil tambah = {k}")
 print(f"Hasil kurang = {l}")
 print(f"Hasil kali = {m}")
 print(f"Hasil bagi = {n}")
+
