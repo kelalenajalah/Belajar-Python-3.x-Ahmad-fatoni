@@ -81,4 +81,3 @@ Terima kasih sudah mampir ke profil saya. Saya tahu perjalanan ini panjang, penu
 > **"Setiap baris kode yang saya tulis hari ini adalah pondasi bagi mimpi besar saya esok hari."**
 
 Mari bertumbuh, belajar, dan membangun bersama.
-
